@@ -1,0 +1,66 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+        Backend
+        <ul>
+            <li>
+                app
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                config
+                <ul>
+                    <li>banco.js</li>
+                    <li>banco.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        frontend
+        <ul>
+            <li>
+                public
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    const sublistas = document.querySelectorAll('.tree ul ul');
+
+    sublistas.forEach(ul => {
+        ul.style.display = 'none';
+        ul.parentElement.style.cursor = 'pointer';
+    });
+
+    const itensLista = document.querySelectorAll('.tree li');
+
+    itensLista.forEach(li => {
+        li.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            const listaInterna = this.querySelector('ul');
+
+            if (listaInterna) {
+                if (listaInterna.style.display === 'none') {
+                    listaInterna.style.display = 'block';
+                } else {
+                    listaInterna.style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
