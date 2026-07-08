@@ -66,5 +66,4 @@ function menorNumeroDeNotas (valor) {
     }
 }
 
-menorNumeroDeNotas(38);
 menorNumeroDeNotas(56);

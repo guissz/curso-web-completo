@@ -15,4 +15,4 @@ const jurosCompostos = (capitalInicial, taxaJuros, tempoAplicacao) => {
 }
 
 montante(1000, 2, 10);
-jurosCompostos(1000, 10, 3);
+jurosCompostos(100, 3, 10)
